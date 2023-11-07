@@ -1,0 +1,15 @@
+name: Echo-test
+
+on:
+  push:
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: vimtor/action-zip@v1.1
+      with:
+        files: .
+        recursive: false
+        dest: result.zip
