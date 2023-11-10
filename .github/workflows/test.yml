@@ -13,11 +13,6 @@ jobs:
     - run: zip -r mod.zip a/ test
     - run: sha1sum mod.zip > mod.zip.sha1sum
 
-    - uses: actions/upload-artifact@v3
-      with:
-        name: mod.zip
-        path: mod.zip
-
     - uses: pyTooling/Actions/releaser@main
       with:
         tag: continuous
