@@ -12,6 +12,13 @@ jobs:
     - uses: actions/checkout@v4
     - run: zip -r mod.zip a/ test
     - run: sha1sum mod.zip > mod.zip.sha1sum
+
     - uses: actions/upload-artifact@v3
       with:
+        name: mod.zip
         path: mod.zip
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: mod.zip.sha1sum
+        path: mod.zip.sha1sum
