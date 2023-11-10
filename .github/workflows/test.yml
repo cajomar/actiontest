@@ -15,7 +15,6 @@ jobs:
 
     - uses: pyTooling/Actions/releaser@main
       with:
-        tag: continuous
         rm: true
         token: ${{ secrets.GITHUB_TOKEN }}
         files: mod.zip*
