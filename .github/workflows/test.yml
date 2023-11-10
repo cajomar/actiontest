@@ -18,7 +18,9 @@ jobs:
         name: mod.zip
         path: mod.zip
 
-    - uses: actions/upload-artifact@v3
+    - uses: eine/tip@master
       with:
-        name: mod.zip.sha1sum
-        path: mod.zip.sha1sum
+        tag: continuous
+        rm: true
+        token: ${{ secres.GITHUB_TOKEN }}
+        files: mod.zip*
