@@ -22,5 +22,5 @@ jobs:
       with:
         tag: continuous
         rm: true
-        token: ${{ secres.GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         files: mod.zip*
