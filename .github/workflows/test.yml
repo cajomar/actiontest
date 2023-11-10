@@ -1,7 +1,8 @@
-name: Echo-test
+name: zip
 
 on:
   push:
+    - main
 
 jobs:
   zip:
