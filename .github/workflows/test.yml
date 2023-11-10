@@ -2,7 +2,8 @@ name: zip
 
 on:
   push:
-    - main
+    branches:
+      - main
 
 jobs:
   zip:
