@@ -10,13 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: vimtor/action-zip@v1.1
-      with:
-        files: .
-        recursive: false
-        dest: result.zip
+    - run: zip -r mod.zip a/ test
+    - run: sha1sum mod.zip > mod.zip.sha1sum
     - uses: actions/upload-artifact@v3
       with:
-        name: mod.zip
-        path: result.zip
-
+        path: mod.zip
