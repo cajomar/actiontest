@@ -18,7 +18,7 @@ jobs:
         name: mod.zip
         path: mod.zip
 
-    - uses: eine/tip@master
+    - uses: pyTooling/Actions/releaser@main
       with:
         tag: continuous
         rm: true
