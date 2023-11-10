@@ -13,3 +13,8 @@ jobs:
         files: .
         recursive: false
         dest: result.zip
+    - uses: actions/upload-artifact@v3
+      with:
+        name: mod.zip
+        path: result.zip
+
